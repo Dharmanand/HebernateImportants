@@ -17,6 +17,7 @@ public class HibernateTest {
 
 		session.save(student);
 		session.beginTransaction().commit();
+		session.close();
 		
 	}
 
