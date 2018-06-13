@@ -1,6 +1,8 @@
 package com.kdsoft.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -8,17 +10,13 @@ import javax.persistence.Table;
 @Table(name="Student_Info")
 public class Student {
 	
-	@Id
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String name;
-	private String email;
-	private int marks;
 	
-	public Student(String name, String email, int marks) {
+	public Student(String name) {
 		super();
 		this.name = name;
-		this.email = email;
-		this.marks = marks;
 	}
 	
 	public int getId() {
@@ -33,17 +31,4 @@ public class Student {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public int getMarks() {
-		return marks;
-	}
-	public void setMarks(int marks) {
-		this.marks = marks;
-	}
-	
 }

@@ -13,8 +13,9 @@
 		<property name="hibernate.current_session_context_class">thread</property>
 		<property name="hibernate.show_sql">true</property>
 		
-		 <property name="hbm2ddl.auto">update</property>
+		 <property name="hbm2ddl.auto">create</property>
 
 		<mapping class="com.kdsoft.entities.Student" />
+		<mapping class="com.kdsoft.entities.StudentDetails" />
 	</session-factory>
 </hibernate-configuration>
