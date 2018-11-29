@@ -15,7 +15,7 @@ public class EmployeeTest {
 //		insertEmployeeRecord(emp2);
 		
 		
-//	Use Merge() method in hibernate with same employee record with different objects	
+//	Use Merge() method of hibernate with same employee record with different objects	
 		Session session1 = HibernateUtil.getSessionFactory().openSession();
 		session1.beginTransaction();
 		Employee emp = (Employee) session1.get(Employee.class, 1);
